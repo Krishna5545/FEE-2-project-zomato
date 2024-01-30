@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato Clone</title>
+    <style>
+      /* Reset some default styles */
+      /* Additional CSS Code */
+
+      .search-bar {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .search-bar input {
+        padding: 10px;
+        width: 60%;
+        margin-right: 10px;
+      }
+
+      .search-bar button {
+        padding: 10px;
+        background-color: #503ce7;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .restaurants-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .restaurant-card:hover {
+        transform: scale(1.05); /* Increase size on hover for visual feedback */
+      }
+
+      /* Styling for the modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .close-modal {
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa; /* Light background color */
+      }
+
+      header,
+      nav,
+      .restaurant-card,
+      footer {
+        margin: 20px; /* Add margin to all major sections */
+      }
+
+      header {
+        background-color: #4a3ce7;
+        color: #fff;
+        text-align: center;
+        padding: 15px; /* Increased padding for better visual appeal */
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold; /* Make navigation links bold */
+      }
+
+      .restaurant-card {
+        border: 2px solid #ddd; /* Slightly thicker border */
+        padding: 20px; /* Increased padding for better visual appeal */
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly larger box shadow */
+        background-color: #fff; /* White background for cards */
+        overflow: hidden; /* Ensure content doesn't overflow */
+      }
+
+      .restaurant-card img {
+        width: 100%;
+        border-radius: 10px; /* Slightly rounded corners for images */
+        margin-bottom: 15px; /* Add some space between image and text */
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px; /* Increased padding for better visual appeal */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Zomato Clone</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Search</a>
+      <a href="#">Order</a>
+      <a href="#">Login</a>
+    </nav>
+    <div class="restaurant-card">
+      <img
+        src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png"
+        alt="Restaurant Image"
+      />
+      <h2>Restaurant Name</h2>
+      <p>Address: Restaurant Address, City</p>
+      <p>Cuisine: Indian, Chinese, Continental</p>
+      <p>Rating: 4.5</p>
+    </div>
+    <!-- Additional HTML Code -->
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for restaurants..." />
+      <button>Search</button>
+    </div>
+
+    <div class="restaurants-grid">
+      <!-- Repeat the following restaurant card for additional entries -->
+      <div class="restaurant-card">
+        <img
+          src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png"
+          alt="Restaurant Image"
+        />
+        <h2>Another Restaurant</h2>
+        <p>Address: Another Restaurant Address, City</p>
+        <p>Cuisine: Italian, Mexican, Japanese</p>
+        <p>Rating: 4.2</p>
+      </div>
+    </div>
+
+    <!-- Modal for detailed restaurant information -->
+    <div class="modal" id="restaurantModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img
+          src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png"
+          alt="Restaurant Image"
+        />
+        <h2>Detailed Restaurant Name</h2>
+        <p>Address: Detailed Restaurant Address, City</p>
+        <p>Cuisine: Indian, Chinese, Continental</p>
+        <p>Rating: 4.8</p>
+        <p>Opening Hours: Mon-Sat: 12:00 PM - 10:00 PM</p>
+        <p>Specialties: Signature Dish, Chef's Recommendations</p>
+        <!-- Additional information can be added as needed -->
+      </div>
+    </div>
+
+    <!-- Repeat the restaurant card for additional entries -->
+    <footer>
+      <p>Hello, my name is Krishna</p>
+    </footer>
+  </body>
+</html>
